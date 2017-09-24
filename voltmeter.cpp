@@ -26,7 +26,7 @@ void VOLTMETR::add(uint16_t data){
             countPeriod++;
             adcCounter = 0;
             isNewVawe = 0;
-            if (countPeriod == 4){
+            if (countPeriod == 8){
                 countPeriod = 0;
                 isDone = 1;
             }
@@ -52,9 +52,9 @@ uint16_t VOLTMETR::getVoltage(){
 void VOLTMETR::print(){
     printVoltage += voltage;
     printCounter++;
-    if (printCounter == 10){
+    if (printCounter == 4){
         printCounter = 0;
-        DISPLAY::print(printVoltage / 10);
+        DISPLAY::print(printVoltage >> 2);
         printVoltage = 0;
     }
 }

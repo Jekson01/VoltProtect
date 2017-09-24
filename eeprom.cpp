@@ -46,25 +46,37 @@ void EEPROM::save(){
 }
 
 uint8_t EEPROM::load(uint8_t num){
-
+    uint8_t dataError = 0;
     CRC crc;
+    
     PRG::autoCalibrateEnable = eParam[num].autoCalibrateEnable;
     crc.add8(PRG::autoCalibrateEnable);
     
     PRG::maxVoltage = eParam[num].upVoltage;
     crc.add16(PRG::maxVoltage);
+    if (PRG::maxVoltage == 0)
+        dataError++;
     
     PRG::minVoltage = eParam[num].downVoltage;
     crc.add16(PRG::minVoltage);
+    if (PRG::minVoltage == 0)
+        dataError++;
     
     PRG::delayOn = eParam[num].delayOn;
     crc.add16(PRG::delayOn);
+    if (PRG::delayOn == 0)
+        dataError++;
     
     VOLTMETR::koef = eParam[num].scaleVoltage;
     crc.add16(VOLTMETR::koef);
+    if (VOLTMETR::koef == 0)
+        dataError++;
     
     uint8_t tmpCrc = eParam[num].crc;
     crc.add8(tmpCrc);
+    
+    if (dataError != 0)
+        return 1;
     
     if (crc.getCRC8() != 0)
         return 1;
@@ -73,5 +85,20 @@ uint8_t EEPROM::load(uint8_t num){
 }
 
 void EEPROM::load(){
-
+    for (uint8_t i = 0; i < MEM_COPY_COUNT; i++){
+        if (load(i) == 0)
+        {
+            if (i != 0)
+                save();
+            
+            return;
+        }
+    }
+    
+    PRG::autoCalibrateEnable = 0xFF;
+    PRG::maxVoltage = DEF_U_UP;
+    PRG::minVoltage = DEF_U_DN;
+    PRG::delayOn = DEF_T_ON;
+    VOLTMETR::koef = DEF_K_ADC;
+    save();
 }

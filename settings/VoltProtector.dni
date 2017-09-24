@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=-878612179
+Checksum=-1908589344
 [CodeCoverage]
 Enabled=_ 0
 [Stack]
@@ -59,13 +59,13 @@ Freq=16000000
 LogEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [Breakpoints]
 Count=0
 [Aliases]

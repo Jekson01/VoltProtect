@@ -6,25 +6,6 @@ void HW::initialize(){
     CLK_CKDIVR_bit.HSIDIV = HSI_4MHz;
     CLK_CKDIVR_bit.CPUDIV = 0;
     while (CLK_ICKR_bit.HSIRDY != 1){}
-    
-    /*
-    // IO setup
-    PA_DDR_bit.DDR3 = 1;
-    PA_CR1_bit.C13 = 1;
-    
-    
-    
-    PC_DDR = 0xE8;
-    PC_CR1 = 0xE8;
-    
-    PD_DDR = 0x2F;
-    PD_CR1 = 0x2F;
-    
-    // Catod outs
-    PB_DDR_bit.DDR4 = 1;
-    PB_DDR_bit.DDR5 = 1;
-    PD_DDR_bit.DDR4 = 1;
-    */
         
     timersInitialize();
     adcInitialize();
@@ -34,22 +15,14 @@ void HW::initialize(){
 }
 
 void HW::timersInitialize(){
-    // Timer 4 init
-    /*
-    TIM4_SR_bit.UIF = 0;
-    TIM4_PSCR = 0x05;
-    //TIM4_ARR = 125;
-    TIM4_IER_bit.UIE = 1;
-    TIM4_CR1_bit.CEN = 1;
-    */
     
     // Timer 1 init for display and buttons check
     TIM1_SR1_bit.UIF = 0;
     
     TIM1_PSCRH = (1000) >> 8;
-    TIM1_PSCRL = (1000) & 0xFF; //Делитель на 200
+    TIM1_PSCRL = (1000) & 0xFF; //Делитель на 1000
     
-    TIM1_ARRH = (19) >> 8; //Частота переполнений = 4М / 200 / 10 = 2 kГц
+    TIM1_ARRH = (19) >> 8; //Частота переполнений = 4М / 1000 / 20 = 100 Гц
     TIM1_ARRL = (19)& 0xFF;
 
     

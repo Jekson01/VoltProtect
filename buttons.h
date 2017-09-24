@@ -17,7 +17,7 @@
                         PD_ODR_bit.ODR5 = 0
                            
 #define LONG_PRESS_DELAY        10
-#define PRESS_DELAY             60
+#define PRESS_DELAY             50
 #define MIN_PRESS_DELAY         5
                             
 typedef enum KEYCODES{keyNone = 0, keyLeft = 1, keyRight = 2, keyTwo = 3} KEYCODES;

@@ -42,7 +42,7 @@ void DISPLAY::initialize(){
     DDR_F();
     DDR_G();
     DDR_H();
-    setBright(MAX_BRIGHT - 6);
+    setBright(MAX_BRIGHT - 7);
 }
 
 void DISPLAY::update(){

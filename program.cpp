@@ -98,8 +98,11 @@ void PRG::editParams(){
         }
         DISPLAY::print(delayOn);
     }
-    
+    DISPLAY::digits[0] = S_CLEAR;
+    DISPLAY::digits[1] = S_CLEAR;
+    DISPLAY::digits[2] = S_CLEAR;
     EEPROM::save();
+    HW::reset();
 }
 
 void PRG::calibrate(){
@@ -167,6 +170,7 @@ void PRG::autoCalibrate(){
                 VOLTMETR::koef--;
             
             if (voltage == 220){
+                autoCalibrateEnable = AUTO_CAL_DISABLE;
                 loadDefault();
             }
             VOLTMETR::print();

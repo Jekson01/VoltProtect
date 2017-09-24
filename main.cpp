@@ -117,9 +117,12 @@ int main()
         if (keyCode == keyRight){
             if (BTN::isLongPress())
             {
-                RELAY::off();
-                DISPLAY::blinkOn(OFF);
-                PRG::autoCalibrate();
+                if (PRG::autoCalibrateEnable != AUTO_CAL_DISABLE)
+                {
+                    RELAY::off();
+                    DISPLAY::blinkOn(OFF);
+                    PRG::autoCalibrate();
+                }
             }
         }
     }
