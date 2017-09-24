@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "C:\Users\User\Documents\IAR_PRG\VoltProtector\settings\VoltProtector.Debug.general.xcl" --backend -f "C:\Users\User\Documents\IAR_PRG\VoltProtector\settings\VoltProtector.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "F:\Documents\IarSTM\VoltProtector\settings\VoltProtector.Debug.general.xcl" --backend -f "F:\Documents\IarSTM\VoltProtector\settings\VoltProtector.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "C:\Users\User\Documents\IAR_PRG\VoltProtector\settings\VoltProtector.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\User\Documents\IAR_PRG\VoltProtector\settings\VoltProtector.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "F:\Documents\IarSTM\VoltProtector\settings\VoltProtector.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\Documents\IarSTM\VoltProtector\settings\VoltProtector.Debug.driver.xcl" 
 
 @echo off 
 :end

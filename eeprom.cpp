@@ -63,9 +63,12 @@ uint8_t EEPROM::load(uint8_t num){
     VOLTMETR::koef = eParam[num].scaleVoltage;
     crc.add16(VOLTMETR::koef);
     
-    uint8_t crc = eParam[num].crc;
+    uint8_t tmpCrc = eParam[num].crc;
+    crc.add8(tmpCrc);
     
-    if (crc != 0)
+    if (crc.getCRC8() != 0)
+        return 1;
+    
     return 0;
 }
 
