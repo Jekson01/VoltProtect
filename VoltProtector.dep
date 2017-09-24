@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>475247592</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\crc.cpp</file>
+      <file>$PROJ_DIR$\buttons.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.o</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\buttons.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$PROJ_DIR$\Debug\List\VoltProtector.map</file>
+      <file>$PROJ_DIR$\Debug\Obj\ind7seg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\eeprom.o</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s003f3.h</file>
+      <file>$PROJ_DIR$\crc.h</file>
+      <file>$PROJ_DIR$\buttons.cpp</file>
+      <file>$PROJ_DIR$\delay.cpp</file>
+      <file>$PROJ_DIR$\delay.h</file>
+      <file>$PROJ_DIR$\device.h</file>
+      <file>$PROJ_DIR$\eeprom.cpp</file>
+      <file>$PROJ_DIR$\eeprom.h</file>
+      <file>$PROJ_DIR$\hardware.cpp</file>
+      <file>$PROJ_DIR$\hardware.h</file>
+      <file>$PROJ_DIR$\ind7seg.cpp</file>
+      <file>$PROJ_DIR$\ind7seg.h</file>
+      <file>$PROJ_DIR$\macros.h</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\program.cpp</file>
+      <file>$PROJ_DIR$\program.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\relayout.h</file>
+      <file>$PROJ_DIR$\voltmeter.cpp</file>
+      <file>$PROJ_DIR$\relayout.cpp</file>
+      <file>$PROJ_DIR$\voltmeter.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ind7seg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\voltmeter.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\VoltProtector.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\inttypes.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\delay.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\buttons.o</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\eeprom.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\relayout.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\delay.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\program.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\VoltProtector.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\voltmeter.pbi</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s003k3.icf</file>
+      <file>$PROJ_DIR$\Debug\Obj\ind7seg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\relayout.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\eeprom.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\buttons.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\hardware.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\voltmeter.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\delay.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\program.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\program.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\relayout.pbi</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\crc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 13 39 66 6 61 28 42 4 49 48</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 28 49 39 48 6 61 13 42 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 37 9</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\buttons.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 1 17 12 56 39 66 6 61 28 42 4 49 48 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 66 12 28 49 17 39 48 61 1 24 6 42 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\delay.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 60</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 16 39 66 6 61 28 42 4 49 48</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 28 49 39 48 6 61 16 42 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\eeprom.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 19 17 12 56 39 66 6 61 28 42 4 49 48 24 27 23 1 32 16 21 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 61 24 39 32 23 17 12 49 16 13 27 56 6 28 19 48 42 4 1 21</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hardware.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 21 17 12 56 39 66 6 61 28 42 4 49 48 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 61 4 24 6 48 12 66 28 42 17 39 56 49 21</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ind7seg.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 53</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 23 17 12 56 39 66 6 61 28 42 4 49 48 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 56 17 12 24 66 49 61 23 6 28 48 42 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 21 17 12 56 39 66 6 61 28 42 4 49 48 24 23 1 27 32 16 19 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 66 16 39 42 1 28 32 17 6 61 24 23 27 29 19 12 48 4 21 49</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\program.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 64</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 27 39 66 6 61 28 42 4 49 48 23 17 12 56 24 1 32 16 21 19</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32 61 39 56 1 21 66 17 23 24 16 19 6 28 49 48 42 4 12 27</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\voltmeter.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 59</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 32 39 66 6 61 28 42 4 49 48 23 17 12 56 24</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 23 28 42 39 6 61 48 4 56 32 49 17 12 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\relayout.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 54</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 29 17 12 56 39 66 6 61 28 42 4 49 48 24 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17 39 56 61 23 12 24 66 29 6 28 49 48 42 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\VoltProtector.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 52 41 2 40 11 5 33 43 47 45 35 8 3</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
