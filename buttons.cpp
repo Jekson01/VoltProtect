@@ -6,6 +6,7 @@ namespace BTN{
     uint8_t lastCode;
     uint8_t longPressCounter;
     uint8_t pressDelay = PRESS_DELAY;
+    uint8_t acceleration;
 }
 
 void BTN::update(){
@@ -23,13 +24,17 @@ void BTN::update(){
             if (longPressCounter < 0xFF)
                 longPressCounter++;
             
-            if (longPressCounter == 10){
-                pressDelay /= 2;
-            }
+            if (acceleration){
+                /*
+                if (longPressCounter == 10){
+                    pressDelay /= 2;
+                }
+                */
             
-            if (longPressCounter > 10){
-                if (pressDelay > MIN_PRESS_DELAY)
-                pressDelay--;
+                if (longPressCounter > 10){
+                    if (pressDelay > MIN_PRESS_DELAY)
+                    pressDelay -= 2;
+                }
             }
         }
     }else
@@ -58,4 +63,8 @@ uint8_t BTN::isLongPress(uint8_t delay){
         return 1;
     }
     return 0;
+}
+
+void BTN::accelerationEnable(uint8_t enable){
+    acceleration = enable;
 }

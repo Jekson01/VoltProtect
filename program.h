@@ -25,6 +25,7 @@ namespace PRG{
     extern uint16_t minVoltage;
     extern uint16_t delayOn;
     extern uint8_t autoCalibrateEnable;
+    extern uint8_t bright;
     uint8_t protect();
     void editParams();
     void calibrate();

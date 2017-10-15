@@ -28,8 +28,8 @@ void HW::timersInitialize(){
     
     TIM1_IER_bit.UIE = 1;
     
-    TIM1_CCR1H = (17) >> 8;
-    TIM1_CCR1L = (17) & 0xFF;
+    TIM1_CCR1H = (8) >> 8;
+    TIM1_CCR1L = (8) & 0xFF;
     TIM1_IER_bit.CC1IE = 1;
     
     TIM1_CCR2H = (18) >> 8;

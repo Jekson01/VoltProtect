@@ -15,6 +15,10 @@ void EEPROM::save(uint8_t num){
         eParam[num].autoCalibrateEnable = PRG::autoCalibrateEnable;
     crc.add8(PRG::autoCalibrateEnable);
     
+    if (eParam[num].bright != PRG::bright)
+        eParam[num].bright = PRG::bright;
+    crc.add8(PRG::bright);
+    
     if (eParam[num].upVoltage != PRG::maxVoltage)
         eParam[num].upVoltage = PRG::maxVoltage;
     crc.add16(PRG::maxVoltage);
@@ -51,6 +55,11 @@ uint8_t EEPROM::load(uint8_t num){
     
     PRG::autoCalibrateEnable = eParam[num].autoCalibrateEnable;
     crc.add8(PRG::autoCalibrateEnable);
+    
+    PRG::bright = eParam[num].bright;
+    crc.add8(PRG::bright);
+    if (PRG::bright == 0)
+        dataError++;
     
     PRG::maxVoltage = eParam[num].upVoltage;
     crc.add16(PRG::maxVoltage);
@@ -96,6 +105,7 @@ void EEPROM::load(){
     }
     
     PRG::autoCalibrateEnable = 0xFF;
+    PRG::bright = DEF_BRIGHT;
     PRG::maxVoltage = DEF_U_UP;
     PRG::minVoltage = DEF_U_DN;
     PRG::delayOn = DEF_T_ON;

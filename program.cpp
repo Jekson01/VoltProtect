@@ -5,7 +5,7 @@ namespace PRG{
     uint16_t minVoltage = DEF_U_DN;
     uint16_t delayOn = DEF_T_ON;
     uint8_t autoCalibrateEnable = 0;
-
+    uint8_t bright = DEF_BRIGHT;
 }
 
 uint8_t PRG::protect(){
@@ -29,7 +29,7 @@ void PRG::editParams(){
     DISPLAY::digits[2] = S_P;
     DELAY::ms250(DELAY_SCR_NAME);
     BTN::getState();
-    
+    BTN::accelerationEnable(1);
     // Edit UuP
     DELAY::setDelay(DELAY_SCR_VALUE);
     while(DELAY::isRun()){
@@ -98,6 +98,33 @@ void PRG::editParams(){
         }
         DISPLAY::print(delayOn);
     }
+    
+    // Print bright
+    DISPLAY::digits[0] = S_b;
+    DISPLAY::digits[1] = S_r;
+    DISPLAY::digits[2] = S_CLEAR;
+    DELAY::ms250(DELAY_SCR_NAME);
+    
+    // edit bright
+    DELAY::setDelay(DELAY_SCR_VALUE);
+    while(DELAY::isRun()){
+        uint8_t btnState = BTN::getState();
+        if (btnState != keyNone){
+            if (btnState == keyLeft){
+                if (bright > MIN_BRIGHT)
+                    bright--;
+            }
+                
+            if (btnState == keyRight){
+                if (bright < MAX_BRIGHT)
+                    bright++;
+            }
+            DELAY::setDelay(DELAY_SCR_VALUE);
+            DISPLAY::setBright(bright);
+        }
+        DISPLAY::print(bright);
+    }
+    
     DISPLAY::digits[0] = S_CLEAR;
     DISPLAY::digits[1] = S_CLEAR;
     DISPLAY::digits[2] = S_CLEAR;
@@ -106,7 +133,7 @@ void PRG::editParams(){
 }
 
 void PRG::calibrate(){
-    
+    BTN::accelerationEnable(0);
     DISPLAY::digits[0] = S_C;
     DISPLAY::digits[1] = S_A;
     DISPLAY::digits[2] = S_L;
@@ -125,10 +152,10 @@ void PRG::calibrate(){
         if (keyState != keyNone){
             DELAY::setDelay(DELAY_SCR_VALUE * 2);
             if (keyState == keyLeft)
-                VOLTMETR::koef--;
+                VOLTMETR::koef++;
             
             if (keyState == keyRight){
-                VOLTMETR::koef++;
+                VOLTMETR::koef--;
             }
             
         }
@@ -147,6 +174,7 @@ void PRG::loadDefault(){
     DISPLAY::digits[1] = S_E;
     DISPLAY::digits[2] = S_F;
     DELAY::ms250(DELAY_SCR_NAME);
+    bright = DEF_BRIGHT;
     maxVoltage = DEF_U_UP;
     minVoltage = DEF_U_DN;
     delayOn = DEF_T_ON; 
@@ -164,10 +192,10 @@ void PRG::autoCalibrate(){
         if (VOLTMETR::readyVoltage()){
             uint16_t voltage = VOLTMETR::getVoltage();
             if (voltage < 220)
-                VOLTMETR::koef++;
+                VOLTMETR::koef--;
             
             if (voltage > 220)
-                VOLTMETR::koef--;
+                VOLTMETR::koef++;
             
             if (voltage == 220){
                 autoCalibrateEnable = AUTO_CAL_DISABLE;

@@ -38,7 +38,7 @@ void VOLTMETR::add(uint16_t data){
 uint8_t VOLTMETR::readyVoltage(){
     if (isDone){
         isDone = 0;
-        voltage = (uint16_t)((adcSum * koef) / 200000);      
+        voltage = (uint16_t)((adcSum * 2) / koef);      
         adcSum = 0;
         return 1;
     }

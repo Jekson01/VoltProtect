@@ -16,6 +16,7 @@ typedef enum {
 
 typedef struct{
     uint8_t autoCalibrateEnable;
+    uint8_t bright;
     uint16_t upVoltage;
     uint16_t downVoltage;
     uint16_t delayOn;

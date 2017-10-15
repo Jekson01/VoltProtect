@@ -28,8 +28,9 @@ namespace DISPLAY{
                             0x38, // L
                             0x40, // minus '-'
                             0x79, // E
-                            0x71  // F
-                            
+                            0x71, // F
+                            0x7C, // b
+                            0x50  // r
     };
 }
 
@@ -42,7 +43,6 @@ void DISPLAY::initialize(){
     DDR_F();
     DDR_G();
     DDR_H();
-    setBright(MAX_BRIGHT - 7);
 }
 
 void DISPLAY::update(){

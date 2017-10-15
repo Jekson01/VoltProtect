@@ -72,7 +72,7 @@ int main()
     HW::initialize();
     RELAY::initialize();
     DISPLAY::initialize();
-    
+    DISPLAY::setBright(PRG::bright);
     // check calibrate or load default:
     while(1){
         DELAY::ms250(3);
@@ -115,14 +115,11 @@ int main()
         }
         
         if (keyCode == keyRight){
-            if (BTN::isLongPress())
+            if (PRG::autoCalibrateEnable != AUTO_CAL_DISABLE)
             {
-                if (PRG::autoCalibrateEnable != AUTO_CAL_DISABLE)
-                {
-                    RELAY::off();
-                    DISPLAY::blinkOn(OFF);
-                    PRG::autoCalibrate();
-                }
+                RELAY::off();
+                DISPLAY::blinkOn(OFF);
+                PRG::autoCalibrate();
             }
         }
     }

@@ -45,7 +45,8 @@
 
 #define SEGMENT_COUNT   7
 #define DGT_COUNT       3
-#define MAX_BRIGHT      17
+#define MAX_BRIGHT      12
+#define MIN_BRIGHT      1
                     
 #define S_CLEAR 10
 #define S_U     11
@@ -59,7 +60,9 @@
 #define S_L     19
 #define S_MINUS 20
 #define S_E     21
-#define S_F     22                    
+#define S_F     22
+#define S_b     23
+#define S_r     24                    
                     
 namespace DISPLAY{
     extern uint8_t digits[DGT_COUNT];

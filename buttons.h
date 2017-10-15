@@ -26,6 +26,7 @@ namespace BTN{
     uint8_t getState();
     uint8_t isLongPress();
     uint8_t isLongPress(uint8_t count);
+    void accelerationEnable(uint8_t enable);
 }
 
 #endif /* _BUTTONS_H_ */

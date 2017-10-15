@@ -5,8 +5,9 @@
 #include "macros.h"
 
 #define DEF_U_UP        245
-#define DEF_U_DN        170
+#define DEF_U_DN        175
 #define DEF_T_ON        5
-#define DEF_K_ADC       450
+#define DEF_K_ADC       945
+#define DEF_BRIGHT      8
 
 #endif /* _DEVICE_H_ */
