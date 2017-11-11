@@ -1,4 +1,5 @@
 #include "hardware.h"
+#include "pin_defines.h"
 
 void HW::initialize(){
     
@@ -48,8 +49,8 @@ void HW::timersInitialize(){
 
 void HW::adcInitialize(){
     ADC_CR1_bit.ADON = 1;
-    ADC_TDRL |= (1 << 2);
-    ADC_CSR_bit.CH = 2; // AIN 2
+    ADC_TDRL |= (1 << ADC_PIN);
+    ADC_CSR_bit.CH = ADC_PIN; // AIN 5
     ADC_CR1_bit.CONT = 1;
     ADC_CR2_bit.ALIGN = 1;
     ADC_CR1_bit.SPSEL = 7; // F_CPU / 18

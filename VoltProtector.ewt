@@ -1986,6 +1986,9 @@
     <name>$PROJ_DIR$\main.cpp</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\pin_defines.h</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\program.cpp</name>
   </file>
   <file>

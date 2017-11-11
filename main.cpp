@@ -40,24 +40,14 @@ ISR(TIM1_CAPCOM_CC1IF_handler, TIM1_CAPCOM_CC1IF_vector){
         BTN::update();
         TIM1_SR1_bit.CC2IF = 0;
     }
-    //TIM1_SR1_bit.CC2IF = 0;
-    
 }
 
-/*
-ISR(TIM1_CAPCOM_CC2IF_handler, TIM1_CAPCOM_CC2IF_vector){
-    BTN::update();
-    
-}*/
-    
+
 ISR(ADC, ADC1_EOC_vector)
 {
-  unsigned int result;
-  result = ADC_DRH << 8;
-  result |= ADC_DRL;
-  
-  //result = ADC_DB9RH << 8;
-  //result |= ADC_DB9RL;
+  uint8_t Ul = ADC_DRL;
+  unsigned int result = (ADC_DRH << 8);
+  result |= Ul;
   VOLTMETR::add(result);
   ADC_CSR_bit.EOC = 0;          //—бросим признак прерывани€
 }
@@ -73,6 +63,7 @@ int main()
     RELAY::initialize();
     DISPLAY::initialize();
     DISPLAY::setBright(PRG::bright);
+    
     // check calibrate or load default:
     while(1){
         DELAY::ms250(3);

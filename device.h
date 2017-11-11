@@ -1,5 +1,12 @@
 #ifndef _DEVICE_H_
 #define _DEVICE_H_
+
+// Select devise
+
+#define DIN_STM_02
+//#define EVRO_STM
+
+
 #include <iostm8s003f3.h>
 #include <inttypes.h>
 #include "macros.h"

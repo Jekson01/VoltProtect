@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=-2116712130
+Checksum=1226251372
 [CodeCoverage]
 Enabled=_ 0
 [Stack]
@@ -69,7 +69,9 @@ LogFile=_ ""
 [Breakpoints]
 Count=0
 [Aliases]
-Count=0
+A0=_ "F:\IAR-STM\VOLTPROTECT\hardware.cpp" ""
+A1=_ "F:\IAR-STM\VoltProtect\buttons.cpp" ""
+Count=2
 SuppressDialog=0
 [DebuggerSettings]
 DisableInterruptsWhenStepping=0

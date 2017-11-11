@@ -10,13 +10,23 @@ namespace VOLTMETR{
     uint8_t countPeriod = 0;
     uint16_t printVoltage = 0;
     uint8_t printCounter = 0;
+    uint8_t nullCounter = 0;
 }
 
 void VOLTMETR::add(uint16_t data){
     
     if (data > TRASHHOLD_LEVEL){
-        if (isNewVawe < 3)
+        nullCounter = 0;
+        if (isNewVawe < 3){
             isNewVawe++;
+            return;
+        }
+    }else{
+        nullCounter++;
+        if (nullCounter == 0xFF){
+            adcSum = 0;
+            isDone = 1;
+        }
     }
     
     if (isNewVawe){
